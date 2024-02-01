@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/register.css') }} ">
+    <link rel="icon" type="image/x-ico" href=" {{ url_for('static', filename='imgs/favicon.ico') }} " >
+    <script src=" {{ url_for('static', filename='js/register.js')}} " defer></script>
+    <title> Register </title>
+</head>
+<body>
+    <div class="left-half">
+        <div class="message">
+            <h1 id="welcome"> <strong> Welcome! </strong></h1>
+            <div id="welcome-text">
+                <p> 
+                    <strong>
+                    We are happy that you are<br>
+                    joining our community. If this is<br>
+                    not your first time, click here: 
+                    </strong> 
+                </p>
+            </div>
+            <form method="post" action=" {{ url_for('main.login') }} ">
+                <button id="to-login-button"  type="submit"> <strong> Log-In </strong> </button>
+            </form>
+        </p>
+        </div>
+    </div>
+
+    <div class="right-half">
+        <div class="header">
+            <img src=" {{ url_for('static', filename='imgs/vul_logo.png')}} " alt="logo" id="logo" class="header-item">
+            <h2 id="name-logo" class="header-item"> Vulture </h2>
+        </div>
+        <div class="form">
+            <form action="/register" method="post">
+                <input id="name" class="form-item" name="name" type="text" placeholder="Your real name" oninput="nameValidate()" required> <br>
+                <span id="name-error"></span> 
+                
+                <input id="username" class="form-item" name="username" type="text" placeholder="Choose an username" oninput="usernameValidate()" required><br>
+                <span id="username-error"></span>
+
+                <input id="email" class="form-item" name="email" type="email" placeholder="Enter your best email" oninput="emailValidate()" required><br>
+                <span id="email-error"></span>
+
+                <input id="password" class="form-item" name="password" type="password" placeholder="Your password" oninput="passwordValidate()" required><br>
+                <span id="password-error"></span> 
+
+                <input id="confirm-password" class="form-item" name="confirm-password" type="password" placeholder="Confirm your password" oninput="confirmPasswordValidate()" required><br>
+                <span id="confirm-password-error"></span>
+
+                <div class="sep-line"></div>
+
+                <button type="submit" id="register-button" onclick="formIsValid(event)">
+                    <strong> Create account </strong>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
