@@ -1,3 +1,5 @@
 venv/
 .idea/
 __pycahe__/
+app/__pycahe__/
+app/models/__pycache__/

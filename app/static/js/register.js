@@ -5,9 +5,9 @@ var password = document.getElementById("password");
 var confirmPassword = document.getElementById("confirm_password");
 
 const regexUsername = /^[a-zA-Z0-9_.-]+$/;
-const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+(?:[-'’][a-zA-ZÀ-ÖØ-öø-ÿ]+)?$/;
-const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const regexPassword = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+const regexName = /^[a-zA-Z\s_.-]+$/;
+const regexEmail = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+const regexPassword = /^(?=.*[a-zA-Z])(?=.*\d).{6,}$/;
 
 const fields = document.querySelectorAll('.form-item');
 var lineBreak = document.createElement("br");
@@ -33,7 +33,7 @@ function clearError(errorName, index) {
 function nameValidate() {
     const nameError = document.getElementById('name-error');
 
-    if (fields[0].value.length < 2) {
+    if (fields[0].value.length < 3) {
         nameError.style.display = "block";
         nameError.textContent = "Name's too short.";
         nameError.appendChild(lineBreak);
@@ -66,7 +66,7 @@ function usernameValidate() {
         usernameError.appendChild(lineBreak);
         usernameIsValid = false;
         setError(1);
-    } else if (fields[2].value.length > 20) {
+    } else if (fields[1].value.length > 20) {
         usernameError.style.display = "block";
         usernameError.textContent = "Username's too long.";
         usernameError.appendChild(lineBreak);
@@ -129,8 +129,12 @@ function confirmPasswordValidate() {
         confirmPasswordIsValid = true;
     }
 }   
+
 function formIsValid(event) {
     if (!nameIsValid || !usernameIsValid || !emailIsValid || !passwordIsValid || !confirmPasswordIsValid) {
         event.preventDefault();
+        console.log('erro');
+    } else {
+        console.log("ué porra");
     }
 }

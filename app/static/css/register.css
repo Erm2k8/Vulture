@@ -2,25 +2,29 @@
     font-family: 'novaSquare';
     src: url('../fonts/nova_square.ttf');
 }
+
 body {
     margin: 0;
     display: flex;
     height: 100vh;
 }
+
 .left-half {
     display: flex;
     width: 44%;
     background-color: #BBD6EE;
 }
+
 .left-half .message {
     position: relative;
     top: 50%;
     left: 50%;
     text-align: center;
-    padding-top: 40%;
+    padding-top: 35%;
     transform: translate(-50%, -50%);
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .left-half #welcome {
     color: black;
     font-size: 42px;
@@ -28,10 +32,12 @@ body {
     line-height: normal;
     margin-right: 3%;
 }
+
 .left-half #welcome-text {
     font-size: 18px;
     line-height: 1.5;
 }
+
 .left-half #to-login-button {
     color: black;
     background-color: #BBD6EE;
@@ -45,6 +51,7 @@ body {
     outline: 2px solid #000000;
     border: #F0F8FF;
 }
+
 #to-login-button:hover {
     background-color: #000000;
     color: aliceblue;
@@ -53,15 +60,18 @@ body {
     font-size: 16px;
     border: 1px solid aliceblue;
 }
+
 .right-half {
     width: 56%;
     background-color: #1f1e33;
     align-content: center;
 }
+
 .right-half h2 {
     color: aliceblue;
     display: flex;
 }
+
 .right-half .header {
     display: flex;
     align-items: center; 
@@ -70,13 +80,16 @@ body {
     justify-content: center;
     margin-top: 9%;
 }
+
 .right-half .header-item {
     display: inline-flexbox;
 }
+
 #logo {
     width: 80px;
     height: 80px;
 }
+
 #name-logo {
     color: var(--Alice-blue, #F0F8FF);
     font-family: novaSquare;
@@ -86,6 +99,7 @@ body {
     line-height: normal;
     margin-right: 3%;
 }
+
 .right-half .form {
     display: flex;
     align-items: center; 
@@ -93,6 +107,7 @@ body {
     text-align: center;
     justify-content: center;  
 }
+
 .right-half .form .sep-line {
     width: 550px;
     height: 1px;
@@ -100,6 +115,7 @@ body {
     margin-top: 8%;
     margin-bottom: 8%;
 }
+
 .right-half input {
     margin-bottom: 2px;
     padding: 7px;
@@ -107,6 +123,7 @@ body {
     height: 20px;
     border-radius: 10px;
 }
+
 #register-button {
     color: black;
     background-color: #5FC25D;
@@ -119,6 +136,7 @@ body {
     transition: all 0.1s ease;
     outline: 2px solid #BBD6EE;
 }
+
 #register-button:hover {
     background-color: #3a863a;
     color: aliceblue;
@@ -128,10 +146,10 @@ body {
     border: 1px solid rgb(0, 0, 0);
     padding: 9px 45px;
 }
+
 span {
     font-size: 14px;
     color: rgb(255, 46, 46);
     font-family: Arial, Helvetica, sans-serif;
     padding-bottom: 2px;
 }
-

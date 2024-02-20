@@ -24,7 +24,6 @@
             <form method="post" action=" {{ url_for('main.login') }} ">
                 <button id="to-login-button"  type="submit"> <strong> Log-In </strong> </button>
             </form>
-        </p>
         </div>
     </div>
 
@@ -35,7 +34,7 @@
         </div>
         <div class="form">
             <form action="/register" method="post">
-                <input id="name" class="form-item" name="name" type="text" placeholder="Your real name" oninput="nameValidate()" required> <br>
+                <input id="name" class="form-item" name="name" type="text" placeholder="First and last name" oninput="nameValidate()" required> <br>
                 <span id="name-error"></span> 
                 
                 <input id="username" class="form-item" name="username" type="text" placeholder="Choose an username" oninput="usernameValidate()" required><br>

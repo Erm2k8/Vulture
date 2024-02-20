@@ -6,12 +6,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask.cli import FlaskGroup
 import os
-from .views import main_bp
 
 app = Flask("__name__", template_folder="app/templates", static_folder="app/static")
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///vul_databank.db"
-
-app.register_blueprint(main_bp)
 
 @app.route('/favicon.ico')
 def favicon():
